@@ -1,0 +1,25 @@
+:root {
+  --col: #000000;
+}
+
+.tl, .ml {
+  border-right: 3px solid var(--col);
+  border-bottom:3px solid var(--col);
+}
+
+.tm, .mm {
+  border-bottom: 3px solid var(--col);
+}
+
+.tr, .mr {
+  border-left: 3px solid var(--col);
+  border-bottom:3px solid var(--col);
+}
+
+.bl {
+  border-right: 3px solid var(--col);
+}
+
+.br {
+  border-left: 3px solid var(--col);
+}

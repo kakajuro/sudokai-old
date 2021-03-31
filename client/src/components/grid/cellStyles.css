@@ -1,0 +1,65 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:root {
+  --col:  #000000;
+}
+
+.inputs {
+  font-size: 25px;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  padding: 0 0;
+  margin: 0;
+}
+
+.inputs:focus {
+  outline: 0px solid transparent;
+}
+
+.tlc, .mlc {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 1px solid var(--col);
+  border-bottom: 1px solid var(--col);
+}
+
+.tmc, .mmc {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 1px solid var(--col);
+}
+
+.trc, .mrc {
+  border-top: 0px solid transparent;
+  border-left: 1px solid var(--col);
+  border-right: 0px solid transparent;
+  border-bottom: 1px solid var(--col);
+}
+
+.blc {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 1px solid var(--col);
+  border-bottom: 0px solid transparent;
+}
+
+.bmc {
+  border-bottom: 0px solid transparent;
+}
+
+.brc {
+  border-top: 0px solid transparent;
+  border-left: 1px solid var(--col);
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+}
