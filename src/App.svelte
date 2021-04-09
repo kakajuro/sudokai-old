@@ -1,6 +1,13 @@
 <script>
   import Info from './components/Info.svelte';
   import SudokuGrid from './components/grid/SudokuGrid.svelte';
+
+  import { grid } from './utils/stores';
+  import { subscribe } from 'svelte/internal';
+
+  const handleUpdateGrid = (e) => {
+    
+  }
 </script>
 
 <svelte:head>
@@ -28,6 +35,9 @@
     column-gap: 25px;
     padding-left: 10%;
     padding-right: 10%;
+  }
+
+  .sudokuGrid {
     align-items: center;
     justify-content: center;
   }
@@ -35,7 +45,11 @@
 
 <main class="container">
   <div class="grid">
-    <Info />
-    <SudokuGrid />
+    <div class="info">
+      <Info on:updateGrid={handleUpdateGrid} />
+    </div>
+    <div class="sudokuGrid">
+      <SudokuGrid />
+    </div>
   </div>
 </main>

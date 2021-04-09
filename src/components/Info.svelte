@@ -1,9 +1,18 @@
 <script>
-  import Spacer from './Spacer.svelte';
+  import { getSudoku } from '../utils/apiCall';
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+
+  const updateGrid = () => {
+    getSudoku();
+    dispatch('updateGrid');
+  }
+
 </script>
 
 <style>
-  h1, h2, h3, h4, ul, p {
+  h1, h4 {
     margin: 0;
   }
 
@@ -12,11 +21,13 @@
   }
 
   main {
-    padding-left: 20%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    margin: 0 0;
+    padding: 0 0;
+  }
+
+  .title {
+    font-size: 50px;
+    padding-bottom: 25px;
   }
 
   .list {
@@ -24,10 +35,22 @@
     flex-direction: column;
     justify-content: start;
   }
+
+  .btn {
+    width: 100px;
+    
+    padding: 0.5rem 1rem;
+  }
+
+  .section {
+    padding-top: 25px;
+  }
 </style>
 
 <main>
+  <h1 class="title">Sudoku</h1>
   <h1>Rules:</h1>
-  <Spacer height={5} width={1}/>
   <h4>Fill the grid but make sure 2 numbers cannot be in the same 3x3 box, row or column.</h4>
+  <div class="section"></div>
+  <button class="btn" on:click={updateGrid}>Generate</button>
 </main>

@@ -1,15 +1,23 @@
 <script>
+  import { useEffect } from '../../utils/hooks';
+
   import './cellStyles.css';
 
-  let tlc = 1;
-  let tmc = 1;
-  let trc = 1;
-  let mlc = 1;
-  let mmc = 1;
-  let mrc = 1;
-  let blc = 1;
-  let bmc = 1;
-  let brc = 1;
+  export let square;
+
+  useEffect(() => {
+    console.log(sqaure);
+  }, () => []);
+
+  let tlc = square[0];
+  let tmc = square[1];
+  let trc = square[2];
+  let mlc = square[3];
+  let mmc = square[4];
+  let mrc = square[5];
+  let blc = square[6];
+  let bmc = square[7];
+  let brc = square[8];
 
   let tlcLocked = false;
   let tmcLocked = false;
