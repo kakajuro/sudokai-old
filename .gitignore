@@ -2,3 +2,6 @@
 /public/build/
 
 .DS_Store
+
+# A file with notes in
+workflow.txt

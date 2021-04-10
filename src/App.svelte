@@ -4,10 +4,6 @@
 
   import { grid } from './utils/stores';
   import { subscribe } from 'svelte/internal';
-
-  const handleUpdateGrid = (e) => {
-    
-  }
 </script>
 
 <svelte:head>
@@ -46,7 +42,7 @@
 <main class="container">
   <div class="grid">
     <div class="info">
-      <Info on:updateGrid={handleUpdateGrid} />
+      <Info />
     </div>
     <div class="sudokuGrid">
       <SudokuGrid />
