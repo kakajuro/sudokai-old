@@ -1,12 +1,10 @@
 <script>
-  import { getSudoku } from '../utils/apiCall';
   import { createEventDispatcher } from 'svelte';
 
   const dispatch = createEventDispatcher();
 
   const updateGrid = () => {
-    getSudoku();
-    dispatch('updateGrid');
+    dispatch('generateGrid');
   }
 
 </script>
@@ -28,12 +26,6 @@
   .title {
     font-size: 50px;
     padding-bottom: 25px;
-  }
-
-  .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
   }
 
   .btn {

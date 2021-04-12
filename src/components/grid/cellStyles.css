@@ -9,7 +9,7 @@ input[type=number] {
 }
 
 :root {
-  --col:  #000000;
+  --col: #000000;
 }
 
 .inputs {
@@ -17,8 +17,6 @@ input[type=number] {
   text-align: center;
   width: 75px;
   height: 75px;
-  padding: 0 0;
-  margin: 0;
 }
 
 .inputs:focus {

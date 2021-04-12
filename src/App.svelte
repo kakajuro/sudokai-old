@@ -2,8 +2,13 @@
   import Info from './components/Info.svelte';
   import SudokuGrid from './components/grid/SudokuGrid.svelte';
 
+  import { getSudoku } from './utils/apiCall';
+
   import { grid } from './utils/stores';
-  import { subscribe } from 'svelte/internal';
+  import { solvedGrid } from './utils/stores';
+
+  const handleUpdateGrid = () => getSudoku()
+
 </script>
 
 <svelte:head>
@@ -42,7 +47,7 @@
 <main class="container">
   <div class="grid">
     <div class="info">
-      <Info />
+      <Info on:generateGrid={handleUpdateGrid}/>
     </div>
     <div class="sudokuGrid">
       <SudokuGrid />

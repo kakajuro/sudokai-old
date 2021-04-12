@@ -1,7 +1,0 @@
-# Fetch solved grid and unsolved grid in the same api call
-# Pass unsolved grid through props
-# On input, dispatch an event with the position on the input and the value
-# Compare to value in main grid file
-# If match do nothing, else dispatch an event*
-
-*

@@ -1,19 +1,17 @@
 <script>
-  import { useEffect } from '../../utils/hooks';
-
   import './cellStyles.css';
 
   export let square;
   
-  let tlc = { name: "tlc", val: square[0], isLocked: false };
-  let tmc = { name: "tmc", val: square[1], isLocked: false };
-  let trc = { name: "trc", val: square[2], isLocked: false };
-  let mlc = { name: "mlc", val: square[3], isLocked: false };
-  let mmc = { name: "mmc", val: square[4], isLocked: false };
-  let mrc = { name: "mrc", val: square[5], isLocked: false };
-  let blc = { name: "blc", val: square[6], isLocked: false };
-  let bmc = { name: "bmc", val: square[7], isLocked: false };
-  let brc = { name: "brc", val: square[8], isLocked: false };
+  let tlc = { val: square[0], isLocked: false };
+  let tmc = { val: square[1], isLocked: false };
+  let trc = { val: square[2], isLocked: false };
+  let mlc = { val: square[3], isLocked: false };
+  let mmc = { val: square[4], isLocked: false };
+  let mrc = { val: square[5], isLocked: false };
+  let blc = { val: square[6], isLocked: false };
+  let bmc = { val: square[7], isLocked: false };
+  let brc = { val: square[8], isLocked: false };
 
   let boxes =  [tlc, tmc, trc, mlc, mmc, mrc, blc, bmc, brc];
 
