@@ -1,4 +1,6 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+
   import Info from './components/Info.svelte';
   import SudokuGrid from './components/grid/SudokuGrid.svelte';
 
@@ -7,7 +9,20 @@
   import { grid } from './utils/stores';
   import { solvedGrid } from './utils/stores';
 
-  const handleUpdateGrid = () => getSudoku()
+  var renderGrid = true;
+
+  $: grid.subscribe(val => {
+    if (Object.keys(val).length === 0 && val.constructor === Object) {
+      renderGrid = false;
+    }
+  });
+
+  const dispatch = createEventDispatcher();
+
+  const handleUpdateGrid = () => {
+    getSudoku();
+    renderGrid = true;
+  }
 
 </script>
 
@@ -44,13 +59,27 @@
   }
 </style>
 
+
+{#if renderGrid}
+  <main class="container">
+    <div class="grid">
+      <div class="info">
+        <Info on:generateGrid={handleUpdateGrid}/>
+      </div>
+      <div class="sudokuGrid">
+        <SudokuGrid />
+      </div>
+    </div>
+  </main>
+{:else if !renderGrid}
 <main class="container">
   <div class="grid">
     <div class="info">
       <Info on:generateGrid={handleUpdateGrid}/>
     </div>
-    <div class="sudokuGrid">
+    <!-- <div class="sudokuGrid">
       <SudokuGrid />
-    </div>
+    </div> -->
   </div>
 </main>
+{/if}

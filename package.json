@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
-    "start:dev": "sirv public --single --dev --port=5001",
-    "build:webpack": "webpack server --mode production",
-    "start:webpack": "webpack serve --mode development"
+    "build": "webpack serve --mode production",
+    "start": "webpack serve --mode development"
   },
   "devDependencies": {
     "css-loader": "^5.2.1",
@@ -18,8 +14,5 @@
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {
-    "sirv-cli": "^1.0.0"
   }
 }

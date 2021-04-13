@@ -4,6 +4,16 @@
   import Cell from './Cell.svelte';
   import './gridStyles.css';
 
+  // let r1 = grid[0];
+  // let r2 = grid[1];
+  // let r3 = grid[2];
+  // let r4 = grid[3];
+  // let r5 = grid[4];
+  // let r6 = grid[5];
+  // let r7 = grid[6];
+  // let r8 = grid[7];
+  // let r9 = grid[8];
+
   // Test grid
   let r1 = [0, 7, 0, 0, 0, 0, 0, 4, 0];
   let r2 = [0, 0, 0, 0, 0, 7, 0, 0, 9];

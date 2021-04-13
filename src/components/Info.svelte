@@ -40,9 +40,7 @@
 </style>
 
 <main>
-  <h1 class="title">Sudoku</h1>
-  <h1>Rules:</h1>
-  <h4>Fill the grid but make sure 2 numbers cannot be in the same 3x3 box, row or column.</h4>
+  <h4>Options will be here soon...</h4>
   <div class="section"></div>
-  <button class="btn" on:click={updateGrid}>Generate</button>
+  <button class="btn" on:click={updateGrid}>Start</button>
 </main>

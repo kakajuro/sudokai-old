@@ -9,7 +9,7 @@ export const getSudoku = () => {
   grid.subscribe(val => {
     fetch('https://sugoku.herokuapp.com/solve', {
       method: 'POST',
-      body: escape(val),
+      body: val,
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).then(res => res.json())
       .then(res => solvedGrid.subscribe(val => res.solution))
