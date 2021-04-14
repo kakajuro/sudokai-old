@@ -1,3 +1,5 @@
+Note: I enjoyed trying out svelte, but I'm abandoning this repo and switching the project over to react.
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
